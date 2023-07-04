@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".buffcal">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="MILK PRICE FOR COW"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:gravity="center"
+        />
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        app:cardCornerRadius="10dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:id="@+id/rescard"
+        app:cardElevation="10dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textSize="60sp"
+            android:id="@+id/result"
+            android:textStyle="bold"
+            android:textColor="@color/black" />
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/rescard"
+        android:id="@+id/li"
+        android:layout_marginTop="80dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:inputType="numberDecimal"
+            android:id="@+id/litres"
+            android:textSize="30sp"
+            android:textColor="@color/white"
+            android:background="@drawable/bg"
+            android:hint="ENTER LITRES"
+            android:textColorHint="@color/white"
+            android:gravity="center"
+            android:layout_margin="10dp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:id="@+id/fat"
+            android:inputType="numberDecimal"
+            android:hint="ENTER FAT"
+            android:textSize="30dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:gravity="center"
+            android:background="@drawable/bg"
+            android:layout_margin="10dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/li"
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/li"
+            android:id="@+id/calculate"
+            android:background="@drawable/bg1"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:layout_margin="20dp"
+            android:text="CALCULATE" />
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/li"
+            android:id="@+id/clear"
+            android:background="@drawable/bg1"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:layout_margin="20dp"
+            android:text="CLEAR" />
+    </LinearLayout>
+
+</RelativeLayout>
